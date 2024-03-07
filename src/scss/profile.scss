@@ -1,0 +1,80 @@
+@import "variables";
+/* /src/scss/_variables.scss */
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+.middle {
+    &-h {
+        font-size: 22px;
+        text-align: center;
+        margin-bottom: 50px;
+        font-weight: 600;
+    }
+}
+
+.profile-header {
+    margin-bottom: 20px;
+
+    img {
+        border: 1px solid $black;
+    }
+
+    .row {
+        justify-content: space-between;
+    }
+
+    h6 {
+        font-size: 14px;
+        color: $gray-600;
+    }
+
+    p {
+        font-size: 18px;
+        font-weight: bold;
+    }
+}
+
+.follow-button {
+    button {
+        width: 100%;
+    }
+}
+
+.user-info {
+    h2 {
+        font-size: 24px;
+        margin-bottom: 30px;
+        font-weight: 600;
+    }
+
+    .posts-h {
+        font-size: 19px;
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .middle {
+        &-h {
+            display: none;
+        }
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .profile-header {
+        .stats-row {
+            margin-top: 40px;
+        }
+
+        img {
+            width: 390px;
+        }
+
+        .col-sm-4 {
+            padding: 0px 60px;
+        }
+    }
+}
+
+.logout-mobile {
+    margin-right: 10px;
+}
