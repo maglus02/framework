@@ -18,7 +18,7 @@ export async function initializeProfilePage() {
             const authenticatedUser = getAuthenticatedUser();
             
             if (!authenticatedUser) {
-                throw new Error('Authenticated user not found.');
+                throw new Error("Authenticated user not found.");
             }
 
             userProfileData = await fetchUserProfile(authenticatedUser.name);
@@ -38,7 +38,7 @@ export async function initializeProfilePage() {
 }
 
 function updateProfileLink(username) {
-    const profileLink = document.querySelector('.btn[href="../profile/"]');
+    const profileLink = document.querySelector(".btn[href='../profile/']");
 
     if (profileLink) {
         const updatedHref = `../profile/index.html?name=${username}`;
@@ -48,5 +48,5 @@ function updateProfileLink(username) {
 
 function getUsernameFromUrl() {
     const queryParams = new URLSearchParams(window.location.search);
-    return queryParams.get('name');
+    return queryParams.get("name");
 }

@@ -20,7 +20,7 @@ export async function login(email, password) {
             const { accessToken, ...profile } = (await response.json()).data;
             save("token", accessToken);
             save("profile", profile);
-            window.location.href = 'profile/index.html';
+            window.location.href = "profile/index.html";
             return profile
         } else {
             const errorData = await response.json();

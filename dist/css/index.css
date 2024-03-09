@@ -11906,11 +11906,15 @@ footer div.footer p {
   text-align: center;
 }
 
-.error-message {
+.error-message, .message-container {
   color: #dc3545;
   font-weight: 600;
   padding: 10px;
   text-align: center;
+}
+
+.message-container {
+  color: #7000FF;
 }
 
 /*transitions*/

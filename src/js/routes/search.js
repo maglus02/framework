@@ -5,15 +5,15 @@ export async function searchPage() {
 }
 
 export function handleSearchKeyPress(event) {
-    if (event.key === 'Enter') {
+    if (event.key === "Enter") {
         event.preventDefault();
         redirectWithSearchTerm();
     }
 }
 
 function redirectWithSearchTerm() {
-    const searchInput = document.querySelector('.searchInput');
-    const searchInputMobile = document.querySelector('.searchInputMobile');
+    const searchInput = document.querySelector(".searchInput");
+    const searchInputMobile = document.querySelector(".searchInputMobile");
     const searchTerm = searchInput.value.trim() || searchInputMobile.value.trim();
 
     if (searchTerm) {

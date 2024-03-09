@@ -5,7 +5,7 @@ import { handleGlobalError } from "../../utils/errorHandler.js";
 export async function updatePostApi(postId, postData) {
     try {
         const response = await authFetch(API_BASE + API_POSTS + "/" + postId, {
-            method: 'PUT',
+            method: "PUT",
             body: JSON.stringify(postData),
         });
 

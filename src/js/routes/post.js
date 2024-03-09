@@ -7,13 +7,13 @@ export async function postPage() {
 }
 
 export async function updatePostRoute() {
-    document.addEventListener('postLoaded', () => {
+    document.addEventListener("postLoaded", () => {
         updatePost();
     });
 }
 
 export async function deletePostRoute() {
-    document.addEventListener('postLoaded', () => {
+    document.addEventListener("postLoaded", () => {
         deletePost();
     });
 }

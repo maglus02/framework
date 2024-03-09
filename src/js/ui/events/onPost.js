@@ -1,3 +1,3 @@
 export const postEvents = {
-    POST_SUBMITTED: 'postSubmitted'
+    POST_SUBMITTED: "postSubmitted"
 };

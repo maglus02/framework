@@ -19,17 +19,17 @@ export async function updatePost() {
 
         await updatePostButton();
 
-        exitUpdateMode.addEventListener('click', () => {
+        exitUpdateMode.addEventListener("click", () => {
             const currentPostDetails = document.querySelector(".post")
-            editPostForm.style.display = 'none';
-            currentPostDetails.style.display = 'block';
+            editPostForm.style.display = "none";
+            currentPostDetails.style.display = "block";
             exitUpdateMode.style.display = "none";
             updatePostBtn.style.display = "inline-block";
         });
 
         await saveChangesButton();
     } catch (error) {
-        console.error('Error updating post page:', error);
+        console.error("Error updating post page:", error);
         handleGlobalError(error);
     }
 }

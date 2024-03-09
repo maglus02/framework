@@ -17,8 +17,11 @@ export async function register(name, email, password) {
         });
 
         if (response.ok) {
-            window.location.href = 'index.html?msg=Successfully register the account! Please log in.';
-            return await response.json();
+            const data = response.json();
+            setTimeout(() => {
+                window.location.href = "index.html?msg=Successfully registered the account! Please log in.";
+            }, 500);
+            return data;
         } else {
             const errorData = await response.json();
             throw new Error("Could not register the account. " + errorData.errors[0].message + ".");

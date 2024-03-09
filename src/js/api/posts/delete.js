@@ -5,7 +5,7 @@ import { authFetch } from "../fetch.js";
 export async function deletePostApi(postId) {
     try {
         const response = await authFetch(API_BASE + API_POSTS + "/" + postId , {
-            method: 'DELETE',
+            method: "DELETE",
         });
 
         if (!response.ok) {

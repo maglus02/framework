@@ -5,7 +5,7 @@ import { authFetch } from "../fetch.js";
 export async function submitPost(postData) {
     try {
         const response = await authFetch(API_BASE + API_POSTS, {
-            method: 'POST',
+            method: "POST",
             body: JSON.stringify(postData)
         });
 

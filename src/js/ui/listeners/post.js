@@ -7,9 +7,9 @@ export async function handlePostSubmission(event) {
     try {
         event.preventDefault();
 
-        const titleInput = document.getElementById('postTitle');
-        const bodyInput = document.getElementById('postBody');
-        const mediaInput = document.getElementById('postMedia');
+        const titleInput = document.getElementById("postTitle");
+        const bodyInput = document.getElementById("postBody");
+        const mediaInput = document.getElementById("postMedia");
 
         const title = titleInput.value.trim();
         const body = bodyInput.value.trim();
@@ -19,11 +19,11 @@ export async function handlePostSubmission(event) {
             title: title,
         };
 
-        if (body !== '') {
+        if (body !== "") {
             postData.body = body;
         }
 
-        if (mediaUrl !== '') {
+        if (mediaUrl !== "") {
             postData.media = {
                 url: mediaUrl,
             };
@@ -33,9 +33,9 @@ export async function handlePostSubmission(event) {
 
         document.dispatchEvent(new Event(postEvents.POST_SUBMITTED));
 
-        titleInput.value = '';
-        bodyInput.value = '';
-        mediaInput.value = '';
+        titleInput.value = "";
+        bodyInput.value = "";
+        mediaInput.value = "";
 
         await fetchAndRenderPosts()
     } catch (error) {

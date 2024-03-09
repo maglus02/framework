@@ -18,7 +18,7 @@ export async function fetchUserProfile(username) {
         const data = await response.json();
         return data.data;
     } else {
-        throw new Error('Failed to fetch user profile. Server returned ' + response.status + ' ' + response.statusText);
+        throw new Error("Failed to fetch user profile. Server returned " + response.status + " " + response.statusText);
     }
 }
 
@@ -40,6 +40,6 @@ export async function fetchUserPosts(username) {
         return data.data;
 
     } else {
-        throw new Error('Failed to fetch user posts. Server returned ' + response.status + ' ' + response.statusText);
+        throw new Error("Failed to fetch user posts. Server returned " + response.status + " " + response.statusText);
     }
 }

@@ -3,7 +3,7 @@ import { getUserProfileAndPostDetails } from "../../utils/postUtils.js";
 
 export async function deletePost() {
     try {
-        const deletePostButton = document.querySelector('.deletePostButton');
+        const deletePostButton = document.querySelector(".deletePostButton");
 
         if (deletePostButton) {
             const { userProfile, postDetails } = await getUserProfileAndPostDetails();
@@ -14,7 +14,7 @@ export async function deletePost() {
                 deletePostButton.style.display = "none";
             }
 
-            deletePostButton.addEventListener('click', async () => {
+            deletePostButton.addEventListener("click", async () => {
                 try {
                     const confirmation = confirm("Are you sure you want to delete this post?");
 

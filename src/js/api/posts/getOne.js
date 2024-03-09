@@ -40,7 +40,7 @@ export async function getPost() {
             media: post.media
         }
 
-        const postLoadedEvent = new Event('postLoaded', { bubbles: true });
+        const postLoadedEvent = new Event("postLoaded", { bubbles: true });
         document.dispatchEvent(postLoadedEvent);
     } catch (error) {
         handleGlobalError(error);

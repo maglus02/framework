@@ -7,11 +7,11 @@ export async function getPosts() {
     const feedContainer = document.querySelector(".user-posts");
 
     const urlParams = new URLSearchParams(window.location.search);
-    const searchQ = urlParams.get('query');
+    const searchQ = urlParams.get("query");
 
     try {
         if (!searchQ) {
-            throw new Error('Search ID not found in the URL.');
+            throw new Error("Search ID not found in the URL.");
         }
 
         const response = await authFetch(API_BASE + API_POSTS + API_SEARCH + searchQ + "&_author=true");

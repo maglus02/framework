@@ -3,4 +3,4 @@ import { initializeGlobalErrorHandler } from "./src/js/utils/errorHandler.js";
 
 homePage();
 
-initializeGlobalErrorHandler();
+initializeGlobalErrorHandler()

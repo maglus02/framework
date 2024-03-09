@@ -2,9 +2,9 @@ import { updatePostApi } from "../../api/posts/update.js";
 import { handleGlobalError } from "../../utils/errorHandler.js";
 
 export async function saveChangesButton() {
-    const saveChangesBtn = document.querySelector('.saveChangesButton');
+    const saveChangesBtn = document.querySelector(".saveChangesButton");
 
-    saveChangesBtn.addEventListener('click', async () => {
+    saveChangesBtn.addEventListener("click", async () => {
         const editedTitle = document.querySelector(".editedTitle").value;
         const editedBody = document.querySelector(".editedBody").value;
         const editedMedia = document.querySelector(".editedMedia").value;
