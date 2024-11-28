@@ -1,0 +1,65 @@
+@import "variables";
+/* /src/scss/_variables.scss */
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+.middle-column {
+    h2 {
+        color: $primary;
+        font-weight: 600;
+    }
+}
+
+.feed-header, .post-header {
+    padding: 10px;
+    border-bottom: 1px $primary solid;
+
+    h2 {
+        margin: 0;
+        font-size: 24px;
+    }
+
+    .dropdown {
+        margin-left: 10px;
+        display: inline;
+
+        .dropdown-toggle {
+            background-color: $gray-200;
+            border: none;
+            color: $dark;
+        }
+
+        .dropdown-menu {
+            min-width: 150px;
+        }
+
+        .dropdown-item {
+            color: $dark;
+
+            &:hover {
+                background-color: $gray-100;
+            }
+        }
+    }
+}
+
+.post-form {
+    background-color: $lighter-theme;
+    padding: 20px;
+    border-radius: 5px;
+
+    form {
+        .form-group {
+            input {
+                margin-bottom: 10px;
+            }
+            textarea {
+                margin-bottom: 10px;
+            }
+        }
+
+        button {
+            padding: 5px 40px;
+            font-weight: 600;
+        }
+    }
+}

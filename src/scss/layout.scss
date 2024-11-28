@@ -1,0 +1,120 @@
+@import "variables";
+/* /src/scss/_variables.scss */
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+.logo-container {
+    text-align: center;
+    margin-bottom: 20px;
+
+    h1 {
+        color: $primary;
+        font-family: "Josefin Sans", sans-serif;
+        text-align: left;
+    }
+}
+
+.container-fluid {
+    padding: 20px;
+}
+
+.buttons-container {
+    a {
+        text-align: left;
+        font-size: 24px;
+    }
+
+    a:hover {
+        box-shadow: inset 0 0 5px #0000002a;
+        color: $primary;
+    }
+
+    .active {
+        color: $primary;
+    }
+}
+
+.search-container, .search-container-mobile {
+    .input-group-text, .form-control {
+        background-color: $lighter-theme;
+        border: none;
+    }
+
+    .form-control {
+        transition: none;
+        box-shadow: none;
+    }
+}
+
+.policies {
+    max-width: 250px;
+    a {
+        text-decoration: none;
+    }
+
+    p {
+        color: $policy;
+        font-size: 14px;
+    }
+
+    .row {
+        margin-top: 20px;
+    }
+}
+
+/* .navbar */
+.navbar {
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+
+    .nav-link {
+        font-size: 20px;
+        transition: 0.2s ease;
+    }
+
+    .navbar-nav {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .container-fluid {
+        padding: 0px;
+    }
+}
+
+.middle {
+    &-column {
+        border-left: 1px $primary solid;
+        border-right: 1px $primary solid;
+        padding: 0px 20px;
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .logo-container {
+        margin-bottom: 10px;
+
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+    }
+
+    .search-container, .policies {
+        display: none;
+    }
+
+    .buttons-container {
+        display: none !important;
+    }
+
+    .middle {
+        &-column {
+            border: none;
+        }
+    }
+
+    body {
+        margin-bottom: 50px;
+    } 
+}

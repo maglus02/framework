@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../dist/css/index.css">
+  <link rel="stylesheet" href="../dist/css/profile.css">
+  <link rel="stylesheet" href="../dist/css/posts.css">
+  <link rel="stylesheet" href="../dist/css/layout.css">
+  <script src="https://kit.fontawesome.com/8404d11a1b.js" crossorigin="anonymous"></script>
+  <title>Profile | Framework</title>
+  <link rel="shortcut icon" href="../src/images/favicon.ico" type="image/x-icon">
+  <script type="module" src="index.js"></script>
+  <script type="module" src="../feed/index.js"></script>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-3 order-md-1 order-1">
+        <div class="logo-container">
+          <h1 class="logo">Framework</h1>
+        </div>
+        <div class="d-grid gap-2 buttons-container">
+          <a href="../feed/" class="btn"><i class="fa-solid fa-house"></i> Home</a>
+          <a href="../profile/" class="btn active"><i class="fa-solid fa-user"></i> Profile</a>
+          <a href="../" class="logoutBtn btn"><i class="fa-solid fa-right-from-bracket"></i> Log out</a>
+        </div>
+      </div>
+      <div class="col-md-6 col-sm-12 order-sm-2 order-2 h-100 middle-column">
+        <h2 class="username-upper middle-h">@username</h2>
+        <div class="profile-header row">
+          <div class="col-sm-4">
+            <img src="../src/images/avatar.png" alt="Human design on a gray background"
+              class="img-fluid rounded-circle">
+          </div>
+
+          <div class="col-sm-7 stats-row ms-sm-auto">
+            <div class="row">
+              <div class="postCount col-4">
+                <h6>Posts</h6>
+                <p>0</p>
+              </div>
+              <div class="followerCount col-4">
+                <h6>Followers</h6>
+                <p>0</p>
+              </div>
+              <div class="followingCount col-4">
+                <h6>Following</h6>
+                <p>0</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="follow-button mt-3">
+          <button class="btn btn-primary disabled"><i class="fa-solid fa-user-plus"></i> Follow</button>
+        </div>
+        <div class="user-info mt-4">
+          <h2 class="username-under">@username</h2>
+          <h3 class="posts-h">Posts:</h3>
+          <div class="user-posts mt-3">
+            <h4 class="error-message"><!--Error message--></h4>
+            <!--Posts fetched through API-->
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 order-md-3 order-3">
+        <div class="search-container input-group">
+          <span class="input-group-text" id="addon-wrapping"><i class="fa-solid fa-search"></i></span>
+          <input type="text" class="searchInput form-control" placeholder="Search posts..." aria-label="Search"
+            aria-describedby="addon-wrapping">
+        </div>
+        <div class="policies">
+          <div class="row">
+            <a href="#" class="col">
+              <p>Terms of Service</p>
+            </a>
+            <a href="#" class="col">
+              <p>Privacy Policy</p>
+            </a>
+          </div>
+          <p>© 2024 Framework</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="d-md-none position-absolute top-0 end-0 mt-3 logout-mobile">
+    <a href="../" class="logoutBtnMobile btn btn-outline-primary" title="Log out"><i class="fa-solid fa-right-from-bracket"></i></a>
+  </div>
+
+  <nav class="navbar fixed-bottom navbar-expand bg-body-tertiary d-md-none">
+    <div class="container-fluid">
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a href="../feed/" class="nav-link"><i class="fa-solid fa-house"></i></a>
+          </li>
+          <li class="nav-item">
+            <a href="../profile/" class="nav-link active"><i class="fa-solid fa-user"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom"
+              aria-controls="offcanvasBottom"><i class="fa-solid fa-search"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+    <div class="offcanvas-header">
+      <div class="search-container-mobile input-group">
+        <span class="input-group-text" id="addon-wrapping"><i class="fa-solid fa-search"></i></span>
+        <input type="text" class="searchInputMobile form-control" placeholder="Search posts.." aria-label="Search"
+          aria-describedby="addon-wrapping">
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
